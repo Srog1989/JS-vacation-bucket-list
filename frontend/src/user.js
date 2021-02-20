@@ -12,6 +12,7 @@ class User {
             .then(data => 
                 data.forEach(user => {
                     const newUser = new User(user)
+                    console.log(newUser)
                 })
             )
         // console.log(destinationsData)

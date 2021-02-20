@@ -19,6 +19,6 @@ class ApiService {
                 'content-type': 'application/json',
             }
         })
-        .them(res => res.json())
+        .then(res => res.json())
     }
 }

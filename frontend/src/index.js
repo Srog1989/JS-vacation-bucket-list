@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log("hello")
     Destination.generateDestinations()
 
-const submit = document.querySelector("#submitButton")
+    const userLogin = document.getElementById("new-user-form")
 
-//  submitButton.addEventListener("click", function(e) => {
-//     e.preventdefault
-// })
-})
+    userLogin.addEventListener("submit", function(e){
+        e.preventDefault()
+        const userName = e.target.username.value
+        User.generateUser(userName)
+        
+    })
+})  
