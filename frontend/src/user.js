@@ -4,17 +4,16 @@ class User {
     constructor(user){
         this.id = user.id
         this.name = user.name
+        this.destinations = user.destinations
         User.allUsers.push(this)
     }
 
-    static generateUser() {
-        const userData = apiService.fetchUser()
-            .then(data => 
-                data.forEach(user => {
-                    const newUser = new User(user)
+    static generateUser(userName) {
+        apiService.fetchUser(userName)
+            .then(userdata => 
+                    {
+                    const newUser = new User(userdata)
                     console.log(newUser)
                 })
-            )
-        // console.log(destinationsData)
     }
 }
