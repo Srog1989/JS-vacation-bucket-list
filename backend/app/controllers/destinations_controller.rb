@@ -5,16 +5,18 @@ class DestinationsController < ApplicationController
     end 
 
     def create
-        # user = User.find(params[:user_id])
-        # destination = user.destinations.build({
-        #     nickname:Faker::Name.first_name,
-        #     species:Faker::Games::Pokemon.name
-        # })
-        # render json: pokemon.save ? pokemon : {message: pokemon.errors.messages[:team_max][0]}  
+        destination = Destination.create(destination_params)
+        render json: destination
     end
 
     def destroy
         destination = Destination.find(params[:id])
         destination.destroy
+    end
+
+    private
+
+    def destination_params
+        params.require(:destination).permit(:city, :country, :importance, :user_id)
     end
 end
