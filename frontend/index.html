@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <head>
-    <script type="application/javascript" src="src/user.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/service.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
-    <script type="application/javascript" src="src/destination.js" charset="UTF-8"></script>
+    <head>
+            <meta charset="utf-8">
+            <script type="application/javascript" src="src/user.js" charset="UTF-8"></script>
+            <script type="application/javascript" src="src/service.js" charset="UTF-8"></script>
+            <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+            <script type="application/javascript" src="src/destination.js" charset="UTF-8"></script>
+            <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
 
-  </head>
-  <body>
-      <div class = "container" id = "container">
-
-        <h1>Where Will Life Take You?</h1>
-        <div id = "new-user-and-new-destination-container">
-            <form id = "new-user-form">
-                <label>Your name:</label>
-                <input type ="text" id = "username"/>
-                <input type = "submit" class = "submit" id = "submitButton"/>
-            </form>
+        
+        <img src="/Users/sarah/vacation-bucket-list/frontend/capturing-the-human-heart-TrhLCn1abMU-unsplash (2).jpg">
+        <div class = "container" id = "container">
+            <h1>Create your vacation bucket list</h1>
+                <div id = "new-user-and-new-destination-container">
+                    <form id = "new-user-form">
+                        <label>Your name:</label>
+                        <input type ="text" id = "username"/>
+                        <input type = "submit" class = "submit" id = "submitButton"/>
+                    </form>
+                </div> 
+            <div id = "destinations-container" class = "destinations-container">
+                <h2>The possibilities are endless</h2>
+                <ul id = "List-of-Destinations">
+                </ul>
+            </div>
         </div>
-
-      </div>
-      
-      <div id = "destinations-container" class = "destinations-container">
-    </div>
-  </body>
+    </body>
 </html>
