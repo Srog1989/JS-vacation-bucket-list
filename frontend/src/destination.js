@@ -26,7 +26,7 @@ class Destination {
             ul.appendChild(li)
          }
 
-         renderUserGratitudes(){
+         renderUserDestinations(){
             const list = document.querySelector(".destinations-container")
                 this.destinations.forEach(destination =>{
                     const div = document.createElement("div")

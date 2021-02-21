@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function(){
         e.preventDefault()
         const userName = e.target.username.value
         User.generateUser(userName)
+
+        
         
     })
+
+
 })  
