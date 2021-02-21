@@ -45,4 +45,5 @@ class Destination {
                     list.appendChild(div)
                 })
 
+    }
 }

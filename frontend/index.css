@@ -11,5 +11,11 @@
     height: 25rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #72c472
+    box-shadow: 3px 4px #4aaae2
+  }
+
+  .homepage-img{
+    background: url("/Users/sarah/vacation-bucket-list/frontend/capturing-the-human-heart-TrhLCn1abMU-unsplash (2).jpg") no-repeat right top;
+    height: 800px;
+    background-size: cover;
   }
