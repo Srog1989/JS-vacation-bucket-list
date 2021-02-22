@@ -26,5 +26,24 @@ class ApiService {
         .then(res => res.json())
     }
 
+    fetchCreateDestination(city, country, importance, userId){
+        return fetch(`${this.baseUrl}/destinations`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                city: city,
+                country: country,
+                importance: importance,
+                user_id: userId
+            })
+        })
+        .then(res => res.json())
+    }
+
+    
+
 
 }

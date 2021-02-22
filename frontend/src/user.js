@@ -14,18 +14,20 @@ class User {
                     {
                     const newUser = new User(userdata)
                     newUser.renderUserShowPage()
+                    newUser.renderUserDestinations()
                 })
     }
 
     renderUserShowPage(){
         const userDestination = document.querySelector(".container")
         userDestination.innerHTML = 
-                                `
-                                <form class="new-destination-form">
+                            `
+                                <div class= "new-destination-form">
+                                <form class ="new-destination-form">
                                     <h1> Where Will Life Take You?</h1>
                                     <input
                                         type="text"
-                                        name="City"
+                                        name="city"
                                         value=""
                                         placeholder="City"
                                         class="input-text"
@@ -33,7 +35,7 @@ class User {
                                     <br />
                                     <input
                                         type="text"
-                                        name="Country"
+                                        name="country"
                                         value=""
                                         placeholder="Country"
                                         class="input-text"
@@ -41,7 +43,7 @@ class User {
                                     <br />
                                     <input
                                         type="text"
-                                        name="Importance"
+                                        name="importance"
                                         value=""
                                         placeholder="Enter 1-5 how important it is"
                                         class="input-text"
@@ -53,10 +55,35 @@ class User {
                                         class="submit"
                                     />
                                 </form>
+                                </div>
                                 <div id="destinations-container" class="destinations-container">
                                     <h1>Do it! Go see the World!</h3>
                                 </div>
                             `
+    }
+
+    renderUserDestinations(){
+        const destinationCard = document.querySelector(".destinations-container")
+            this.destinations.forEach(destination =>{
+                const div = document.createElement("div")
+                const h2 = document.createElement("h2")
+                const h3 = document.createElement("h3")
+                const h4 = document.createElement("h4")
+
+                div.setAttribute("class", "card")
+                div.setAttribute("data-id", destination.id)
+
+                h2.innerHTML = destination.city
+                h3.innerHTML = `Country: ${destination.country}`
+                h4.innerHTML = `Importance: ${destination.importance}`
+
+                div.appendChild(h2)
+                div.appendChild(h3)
+                div.appendChild(h4)
+                destinationCard.appendChild(div)
+            })
+            Destination.destinationEvents(this.id)
+
     }
 
 

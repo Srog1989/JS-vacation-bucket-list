@@ -6,6 +6,7 @@ class Destination {
         this.city = destination.city
         this.country = destination.country
         this.importance = destination.importance
+        this.userId = destination.user_id
         Destination.allDestinations.push(this)
     }
 
@@ -26,24 +27,28 @@ class Destination {
             ul.appendChild(li)
          }
 
-         renderUserDestinations(){
-            const list = document.querySelector(".destinations-container")
-                this.destinations.forEach(destination =>{
-                    const div = document.createElement("div")
-                    const h2 = document.createElement("h2")
-                    const h3 = document.createElement("h3")
-                    const h4 = document.createElement("h4")
-                    const p = document.createElement("p")
-                    div.setAttribute("class", "card")
-                    div.setAttribute("data-id", destination.id)
-                    h3.innerHTML = destination.city
-                    h4.innerHTML = `Country: ${destination.country}`
-                    p.innerHTML = `Importance: ${destination.importance}`
-                    div.appendChild(h3)
-                    div.appendChild(h4)
-                    div.appendChild(p)
-                    list.appendChild(div)
-                })
-
+    static destinationEvents(userId){
+        let destinationEvent = document.querySelector(".new-destination-form")
+        destinationEvent.addEventListener("submit", function(e){
+            e.preventDefault()
+            const dCity = e.target.city.value
+            const dCountry = e.target.country.value
+            const dImportance = e.target.importance.value
+            Destination.createDestination(dCity, dCountry, dImportance, userId)
+        })
     }
+
+    static createDestination(dCity, dCountry, dImportance, userId) {
+        apiService.fetchCreateDestination(dCity, dCountry, dImportance, userId)
+            .then(destinationData => 
+                {
+                    const newDestination = new Destination(destinationData)
+                    // Destination.renderDestinations(newDestination)
+                    console.log(newDestination)
+                })
+            
+    }
+
+
+
 }
