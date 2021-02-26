@@ -15,6 +15,7 @@ class User {
                     const newUser = new User(userdata)
                     newUser.renderUserShowPage()
                     newUser.renderUserDestinations()
+                    Destination.destinationEvents(newUser.id)
                 })
     }
 
@@ -57,33 +58,15 @@ class User {
                                 </form>
                                 </div>
                                 <div id="destinations-container" class="destinations-container">
-                                    <h1>Do it! Go see the World!</h3>
+                                    <h1>Your bucket list!</h3>
                                 </div>
                             `
     }
 
     renderUserDestinations(){
-        const destinationCard = document.querySelector(".destinations-container")
-            this.destinations.forEach(destination =>{
-                const div = document.createElement("div")
-                const h2 = document.createElement("h2")
-                const h3 = document.createElement("h3")
-                const h4 = document.createElement("h4")
-
-                div.setAttribute("class", "card")
-                div.setAttribute("data-id", destination.id)
-
-                h2.innerHTML = destination.city
-                h3.innerHTML = `Country: ${destination.country}`
-                h4.innerHTML = `Importance: ${destination.importance}`
-
-                div.appendChild(h2)
-                div.appendChild(h3)
-                div.appendChild(h4)
-                destinationCard.appendChild(div)
-            })
-            Destination.destinationEvents(this.id)
-
+        this.destinations.forEach(destination =>{
+            Destination.renderDestination(destination)
+        })
     }
 
 
