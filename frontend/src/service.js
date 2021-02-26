@@ -43,7 +43,11 @@ class ApiService {
         .then(res => res.json())
     }
 
-    
+    fetchDeleteDestination(destinationNumber) {
+        return fetch(`${this.baseUrl}/destinations/${destinationNumber}`, {
+            method: "DELETE"
+            })
+    }
 
 
 }
