@@ -917,3 +917,2866 @@ Processing by UsersController#create as JSON
 Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1811)
 
 
+Started POST "//users" for ::1 at 2021-02-19 20:52:59 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Sarah", "user"=>{"name"=>"Sarah"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 1827)
+
+
+Started GET "/destinations" for ::1 at 2021-02-20 09:34:40 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (1.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 58ms (Views: 48.3ms | ActiveRecord: 1.6ms | Allocations: 1265)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 09:35:07 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 09:41:10 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.7ms | Allocations: 5438)
+
+
+Started POST "//users" for ::1 at 2021-02-20 09:41:14 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 15ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 4504)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:10:43 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.5ms | Allocations: 5438)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:11:47 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:11:48 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:11:49 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:12:20 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:12:22 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:13:34 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:18:07 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:24:37 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.5ms | Allocations: 5439)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:27:20 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 10:27:40 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 12:46:35 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.6ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 12:52:16 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 12:52:26 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Kirsten"], ["created_at", "2021-02-20 19:52:26.784962"], ["updated_at", "2021-02-20 19:52:26.784962"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 70ms (Views: 3.2ms | ActiveRecord: 8.6ms | Allocations: 6711)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:22:34 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.6ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:22:55 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:23:57 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1246)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:26:56 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:27:22 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:28:16 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 15:28:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1882)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:43:28 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:48:38 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:59:22 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:59:38 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 15:59:45 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 15:59:48 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 16:00:59 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 16:01:10 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1794)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 16:12:35 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (2.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.7ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-20 16:12:44 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Mackenzie", "user"=>{"name"=>"Mackenzie"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mackenzie"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 16:23:02 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1270)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 16:26:52 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:01:07 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.7ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:01:17 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 1826)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:04:24 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:05:47 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:05:52 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:07:03 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:09:35 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:10:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:12:27 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.8ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:27:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:28:42 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:34:07 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.6ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:34:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:34:54 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:35:05 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Sarah", "user"=>{"name"=>"Sarah"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:35:36 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:43:36 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (1.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 2.0ms | Allocations: 1826)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:44:06 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1266)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:44:10 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:45:09 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-20 19:45:15 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-20 19:45:47 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 09:41:19 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 99ms (Views: 94.8ms | ActiveRecord: 0.4ms | Allocations: 1826)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 09:42:59 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.3ms | Allocations: 1266)
+
+
+Started POST "//users" for ::1 at 2021-02-21 09:43:03 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 65ms (Views: 36.7ms | ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 09:43:10 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1248)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 09:51:53 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:05:17 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1267)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:05:22 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:06:01 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:07:30 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 10:08:13 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:16:35 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-21 10:16:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 1.3ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:24:40 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.6ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-21 10:24:43 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:26:24 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:27:36 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 10:27:40 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 10:29:30 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 10:29:33 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 11:18:34 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.8ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-21 11:38:54 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 38ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 1829)
+
+
+Started GET "/destinations" for ::1 at 2021-02-21 11:42:21 -0700
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1264)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 11:51:53 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-21 11:51:57 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.2ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 11:52:19 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 11:52:38 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 11:52:41 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 11:52:48 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 12:52:19 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-21 12:52:27 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 12:52:37 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (5.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 5.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 13:02:50 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.0ms | Allocations: 1826)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 13:02:58 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1266)
+
+
+Started POST "//users" for ::1 at 2021-02-21 13:05:29 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 13:05:36 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 13:08:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1637)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 13:28:34 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (2.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 2.7ms | Allocations: 1267)
+
+
+Started POST "//users" for ::1 at 2021-02-21 13:28:45 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.1ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 13:28:52 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 13:29:03 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 13:59:21 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5452)
+
+
+Started POST "//users" for ::1 at 2021-02-21 13:59:24 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 4505)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:01:09 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 1245)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:01:14 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 14:01:40 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Berlin", "country"=>"Germany", "importance"=>"4", "user_id"=>2, "destination"=>{"city"=>"Berlin", "country"=>"Germany", "importance"=>"4", "user_id"=>2}}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):1:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (pry):1:in `create'
+  [1m[36mDestination Create (0.6ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Germany"], ["importance", 4], ["user_id", 2], ["created_at", "2021-02-21 21:02:16.842119"], ["updated_at", "2021-02-21 21:02:16.842119"]]
+  ↳ (pry):1:in `create'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):1:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Germany"], ["importance", 4], ["user_id", 2], ["created_at", "2021-02-21 21:02:39.537480"], ["updated_at", "2021-02-21 21:02:39.537480"]]
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+Completed 200 OK in 58766ms (Views: 0.6ms | ActiveRecord: 11.5ms | Allocations: 25900)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:04:37 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1549)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:04:40 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2104)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 14:04:57 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Berlin", "country"=>"Germany", "importance"=>"3", "user_id"=>2, "destination"=>{"city"=>"Berlin", "country"=>"Germany", "importance"=>"3", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Germany"], ["importance", 3], ["user_id", 2], ["created_at", "2021-02-21 21:05:07.770810"], ["updated_at", "2021-02-21 21:05:07.770810"]]
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:9:in `create'
+Completed 200 OK in 10271ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 9219)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:07:44 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 2.3ms | Allocations: 6023)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:07:47 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 5089)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:07:54 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:07:57 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:10:48 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:10:51 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:12:03 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:12:05 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:12:52 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:12:56 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:16:55 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:16:58 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:19:24 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1703)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:19:27 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1702)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:19:36 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:19:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:20:07 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:20:10 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:20:42 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:20:45 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:22:25 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:22:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:24:20 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:24:23 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2263)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:25:20 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 1702)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:25:25 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1637)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 14:25:47 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Bora Bora", "country"=>"Island", "importance"=>"5", "user_id"=>5, "destination"=>{"city"=>"Bora Bora", "country"=>"Island", "importance"=>"5", "user_id"=>5}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Bora Bora"], ["country", "Island"], ["importance", 5], ["user_id", 5], ["created_at", "2021-02-21 21:25:47.859808"], ["updated_at", "2021-02-21 21:25:47.859808"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 3962)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 14:26:03 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 1857)
+
+
+Started POST "//users" for ::1 at 2021-02-21 14:26:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:18:05 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 1876)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:18:10 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 2295)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:27:01 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 1876)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:27:04 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 2295)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 19:35:23 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Bora Bora", "country"=>"Island", "importance"=>"5", "user_id"=>2, "destination"=>{"city"=>"Bora Bora", "country"=>"Island", "importance"=>"5", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (5.7ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Bora Bora"], ["country", "Island"], ["importance", 5], ["user_id", 2], ["created_at", "2021-02-22 02:35:23.508658"], ["updated_at", "2021-02-22 02:35:23.508658"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 29ms (Views: 1.4ms | ActiveRecord: 9.1ms | Allocations: 3753)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 19:35:26 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Bora Bora", "country"=>"Island", "importance"=>"5", "user_id"=>2, "destination"=>{"city"=>"Bora Bora", "country"=>"Island", "importance"=>"5", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Bora Bora"], ["country", "Island"], ["importance", 5], ["user_id", 2], ["created_at", "2021-02-22 02:35:26.898392"], ["updated_at", "2021-02-22 02:35:26.898392"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 3740)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:47:05 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 2180)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:47:37 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2161)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:47:41 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 2607)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:48:18 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:48:21 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2575)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:48:51 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:48:54 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2575)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:49:16 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:49:22 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2575)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:49:55 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:49:58 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 2575)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:58:23 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (5.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 5.0ms | Allocations: 2180)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:58:33 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 19:59:46 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 19:59:56 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:09:37 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 2183)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:09:40 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 2607)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:23:55 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 2180)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:23:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.0ms | Allocations: 2607)
+
+
+Started GET "/destinations" for ::1 at 2021-02-21 20:26:35 -0700
+Processing by DestinationsController#index as HTML
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2156)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:29:12 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:29:15 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2575)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:29:52 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:29:55 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 2575)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 20:30:39 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Honolulu", "country"=>"United States", "importance"=>"3", "user_id"=>2, "destination"=>{"city"=>"Honolulu", "country"=>"United States", "importance"=>"3", "user_id"=>2}}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Honolulu"], ["country", "United States"], ["importance", 3], ["user_id", 2], ["created_at", "2021-02-22 03:30:39.817834"], ["updated_at", "2021-02-22 03:30:39.817834"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 3.1ms | Allocations: 3751)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:30:58 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 2310)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:31:01 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2731)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:33:48 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 2313)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:33:53 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:34:11 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Sarah", "user"=>{"name"=>"Sarah"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 20:34:24 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Madrid", "country"=>"Spain", "importance"=>"4", "user_id"=>1, "destination"=>{"city"=>"Madrid", "country"=>"Spain", "importance"=>"4", "user_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.6ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Madrid"], ["country", "Spain"], ["importance", 4], ["user_id", 1], ["created_at", "2021-02-22 03:34:24.518596"], ["updated_at", "2021-02-22 03:34:24.518596"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3738)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 20:34:25 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Madrid", "country"=>"Spain", "importance"=>"4", "user_id"=>1, "destination"=>{"city"=>"Madrid", "country"=>"Spain", "importance"=>"4", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Madrid"], ["country", "Spain"], ["importance", 4], ["user_id", 1], ["created_at", "2021-02-22 03:34:25.999294"], ["updated_at", "2021-02-22 03:34:25.999294"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 3738)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:35:11 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 2614)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:35:30 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2731)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:35:39 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started POST "//destinations" for ::1 at 2021-02-21 20:35:53 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Sidney", "country"=>"Australia", "importance"=>"2", "user_id"=>5, "destination"=>{"city"=>"Sidney", "country"=>"Australia", "importance"=>"2", "user_id"=>5}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Sidney"], ["country", "Australia"], ["importance", 2], ["user_id", 5], ["created_at", "2021-02-22 03:35:53.700564"], ["updated_at", "2021-02-22 03:35:53.700564"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 3738)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:35:55 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 2766)
+
+
+Started POST "//users" for ::1 at 2021-02-21 20:35:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1949)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:39:39 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 2769)
+
+
+Started GET "//destinations" for ::1 at 2021-02-21 20:41:56 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2766)
+
+
+Started GET "//destinations" for ::1 at 2021-02-22 13:38:18 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (2.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 32.7ms | ActiveRecord: 2.0ms | Allocations: 2788)
+
+
+Started GET "//destinations" for ::1 at 2021-02-23 13:27:36 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 0.9ms | Allocations: 2789)
+
+
+Started POST "//users" for ::1 at 2021-02-23 13:27:39 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 22ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 2763)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 19:37:25 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 0.6ms | Allocations: 2789)
+
+
+Started POST "//users" for ::1 at 2021-02-24 19:37:30 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.6ms | Allocations: 2763)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 19:40:43 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 1.6ms | Allocations: 2766)
+
+
+Started POST "//users" for ::1 at 2021-02-24 19:40:48 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 2731)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 19:41:22 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.5ms | Allocations: 2766)
+
+
+Started POST "//users" for ::1 at 2021-02-24 19:41:25 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 2731)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 19:44:21 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 2766)
+
+
+Started POST "//users" for ::1 at 2021-02-24 19:44:25 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 2731)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 19:47:32 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (2.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 2.8ms | Allocations: 2766)
+
+
+Started POST "//users" for ::1 at 2021-02-24 19:47:35 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 1.1ms | Allocations: 2731)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 19:56:08 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (4.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 40.4ms | ActiveRecord: 4.9ms | Allocations: 2791)
+
+
+Started POST "//users" for ::1 at 2021-02-24 19:56:11 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.3ms | Allocations: 2763)
+
+
+Started POST "//destinations" for ::1 at 2021-02-24 20:02:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Berlin", "country"=>"Island", "importance"=>"4", "user_id"=>2, "destination"=>{"city"=>"Berlin", "country"=>"Island", "importance"=>"4", "user_id"=>2}}
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (5.0ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Island"], ["importance", 4], ["user_id", 2], ["created_at", "2021-02-25 03:02:13.897561"], ["updated_at", "2021-02-25 03:02:13.897561"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 8.3ms | Allocations: 3753)
+
+
+Started POST "//destinations" for ::1 at 2021-02-24 20:02:20 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Berlin", "country"=>"Island", "importance"=>"4", "user_id"=>2, "destination"=>{"city"=>"Berlin", "country"=>"Island", "importance"=>"4", "user_id"=>2}}
+  [1m[35m (5.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (1.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Island"], ["importance", 4], ["user_id", 2], ["created_at", "2021-02-25 03:02:20.643948"], ["updated_at", "2021-02-25 03:02:20.643948"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 8.4ms | Allocations: 3738)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:11:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 1.2ms | Allocations: 3092)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:11:17 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 3075)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:12:31 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3070)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:12:34 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 3043)
+
+
+Started POST "//destinations" for ::1 at 2021-02-24 20:13:15 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Vancouver BC", "country"=>"Canada", "importance"=>"1", "user_id"=>2, "destination"=>{"city"=>"Vancouver BC", "country"=>"Canada", "importance"=>"1", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (1.5ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Vancouver BC"], ["country", "Canada"], ["importance", 1], ["user_id", 2], ["created_at", "2021-02-25 03:13:15.544644"], ["updated_at", "2021-02-25 03:13:15.544644"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 3754)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:21:15 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.0ms | Allocations: 3244)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:21:18 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 3231)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:23:03 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 3222)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:23:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 120ms (Views: 118.4ms | ActiveRecord: 0.2ms | Allocations: 3199)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:23:59 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (16.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 86ms (Views: 69.0ms | ActiveRecord: 16.9ms | Allocations: 3222)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:24:03 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 86ms (Views: 51.4ms | ActiveRecord: 0.4ms | Allocations: 3200)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:30:25 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms | Allocations: 3244)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:30:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 58ms (Views: 46.2ms | ActiveRecord: 0.5ms | Allocations: 3231)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:32:56 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 116ms (Views: 115.3ms | ActiveRecord: 0.2ms | Allocations: 3225)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:33:06 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 3199)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:35:26 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 3222)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:35:29 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 3199)
+
+
+Started DELETE "//destinations/4" for ::1 at 2021-02-24 20:35:31 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (3.8ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 7.1ms | Allocations: 2530)
+
+
+Started DELETE "//destinations/16" for ::1 at 2021-02-24 20:35:35 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 6.9ms | Allocations: 2382)
+
+
+Started DELETE "//destinations/15" for ::1 at 2021-02-24 20:35:38 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.6ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 2.6ms | Allocations: 2382)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:35:43 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 2766)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:35:47 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 2731)
+
+
+Started DELETE "//destinations/6" for ::1 at 2021-02-24 20:36:39 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.8ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 6ms (ActiveRecord: 2.3ms | Allocations: 2382)
+
+
+Started DELETE "//destinations/9" for ::1 at 2021-02-24 20:36:43 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.4ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 6ms (ActiveRecord: 2.0ms | Allocations: 2382)
+
+
+Started DELETE "//destinations/14" for ::1 at 2021-02-24 20:36:46 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 7.0ms | Allocations: 2382)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:37:20 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2311)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:37:24 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1949)
+
+
+Started DELETE "//destinations/13" for ::1 at 2021-02-24 20:37:28 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 3.5ms | Allocations: 2382)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:37:33 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:37:39 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started POST "//destinations" for ::1 at 2021-02-24 20:37:50 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Madrid", "country"=>"Spain", "importance"=>"4", "user_id"=>5, "destination"=>{"city"=>"Madrid", "country"=>"Spain", "importance"=>"4", "user_id"=>5}}
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Madrid"], ["country", "Spain"], ["importance", 4], ["user_id", 5], ["created_at", "2021-02-25 03:37:50.409885"], ["updated_at", "2021-02-25 03:37:50.409885"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.3ms | Allocations: 3751)
+
+
+Started DELETE "//destinations/17" for ::1 at 2021-02-24 20:37:52 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 3.3ms | Allocations: 2382)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:37:55 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-24 20:37:58 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-24 20:39:52 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 2158)
+
+
+Started GET "//destinations" for ::1 at 2021-02-25 09:34:11 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.9ms | Allocations: 2180)
+
+
+Started POST "//users" for ::1 at 2021-02-25 09:34:23 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Mackenzie", "user"=>{"name"=>"Mackenzie"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mackenzie"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1825)
+
+
+Started GET "//destinations" for ::1 at 2021-02-25 17:50:02 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 1.5ms | Allocations: 2181)
+
+
+Started POST "//users" for ::1 at 2021-02-25 17:50:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 1825)
+
+
+Started POST "//destinations" for ::1 at 2021-02-25 17:50:24 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Tokyo", "country"=>"Japan", "importance"=>"2", "user_id"=>5, "destination"=>{"city"=>"Tokyo", "country"=>"Japan", "importance"=>"2", "user_id"=>5}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (3.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Tokyo"], ["country", "Japan"], ["importance", 2], ["user_id", 5], ["created_at", "2021-02-26 00:50:24.355094"], ["updated_at", "2021-02-26 00:50:24.355094"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 5.1ms | Allocations: 3754)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 09:04:52 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (2.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 2.1ms | Allocations: 2333)
+
+
+Started POST "//users" for ::1 at 2021-02-26 09:05:04 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 43ms (Views: 34.7ms | ActiveRecord: 1.2ms | Allocations: 2298)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 09:05:30 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Honolulu", "country"=>"United States", "importance"=>"4", "user_id"=>2, "destination"=>{"city"=>"Honolulu", "country"=>"United States", "importance"=>"4", "user_id"=>2}}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.5ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Honolulu"], ["country", "United States"], ["importance", 4], ["user_id", 2], ["created_at", "2021-02-26 16:05:30.314081"], ["updated_at", "2021-02-26 16:05:30.314081"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 3751)
+
+
+Started DELETE "//destinations/10" for ::1 at 2021-02-26 09:05:34 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (1.4ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 2.6ms | Allocations: 2401)
+
+
+Started DELETE "//destinations/8" for ::1 at 2021-02-26 09:05:37 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 6ms (ActiveRecord: 1.9ms | Allocations: 2382)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 09:05:44 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-26 09:05:50 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kirsten", "user"=>{"name"=>"Kirsten"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kirsten"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1949)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 09:06:28 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-26 09:06:43 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Jordan", "user"=>{"name"=>"Jordan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jordan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 2105)
+
+
+Started DELETE "//destinations/19" for ::1 at 2021-02-26 09:07:01 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.7ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 14ms (ActiveRecord: 2.7ms | Allocations: 2382)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:35:15 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.7ms | Allocations: 2028)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:36:54 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Grace", "user"=>{"name"=>"Grace"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Grace"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Grace"], ["created_at", "2021-02-26 17:36:54.673074"], ["updated_at", "2021-02-26 17:36:54.673074"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+Completed 200 OK in 60ms (Views: 3.8ms | ActiveRecord: 4.2ms | Allocations: 3925)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 10:37:15 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Portugel", "country"=>"", "importance"=>"5", "user_id"=>6, "destination"=>{"city"=>"Portugel", "country"=>"", "importance"=>"5", "user_id"=>6}}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Portugel"], ["country", ""], ["importance", 5], ["user_id", 6], ["created_at", "2021-02-26 17:37:15.179340"], ["updated_at", "2021-02-26 17:37:15.179340"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 3751)
+
+
+Started DELETE "//destinations/20" for ::1 at 2021-02-26 10:37:33 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mDestination Load (2.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 4.1ms | Allocations: 2401)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:37:36 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.1ms | Allocations: 2006)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:37:42 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Grace", "user"=>{"name"=>"Grace"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Grace"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1637)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:37:45 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 2006)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:38:09 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Grace", "user"=>{"name"=>"Grace"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Grace"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1637)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 10:38:19 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Portugal", "country"=>"", "importance"=>"5", "user_id"=>6, "destination"=>{"city"=>"Portugal", "country"=>"", "importance"=>"5", "user_id"=>6}}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Portugal"], ["country", ""], ["importance", 5], ["user_id", 6], ["created_at", "2021-02-26 17:38:19.910730"], ["updated_at", "2021-02-26 17:38:19.910730"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.0ms | Allocations: 3738)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:38:23 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:49:17 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 2180)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:53:52 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Sarah", "user"=>{"name"=>"Sarah"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 2137)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 10:54:12 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Honolulu", "country"=>"United States", "importance"=>"4", "user_id"=>1, "destination"=>{"city"=>"Honolulu", "country"=>"United States", "importance"=>"4", "user_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (2.7ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Honolulu"], ["country", "United States"], ["importance", 4], ["user_id", 1], ["created_at", "2021-02-26 17:54:12.743266"], ["updated_at", "2021-02-26 17:54:12.743266"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 20ms (Views: 1.0ms | ActiveRecord: 4.1ms | Allocations: 3754)
+
+
+Started DELETE "//destinations/12" for ::1 at 2021-02-26 10:54:23 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.5ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 7.1ms | Allocations: 2401)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:54:28 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:54:35 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Sarah", "user"=>{"name"=>"Sarah"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2105)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:55:53 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 5.1ms | Allocations: 6494)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:55:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Rose", "user"=>{"name"=>"Rose"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Rose"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rose"], ["created_at", "2021-02-26 17:55:59.826183"], ["updated_at", "2021-02-26 17:55:59.826183"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Completed 200 OK in 20ms (Views: 6.8ms | ActiveRecord: 2.6ms | Allocations: 6658)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 10:56:10 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Cabo", "country"=>"Mexico", "importance"=>"5", "user_id"=>7, "destination"=>{"city"=>"Cabo", "country"=>"Mexico", "importance"=>"5", "user_id"=>7}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Cabo"], ["country", "Mexico"], ["importance", 5], ["user_id", 7], ["created_at", "2021-02-26 17:56:10.481104"], ["updated_at", "2021-02-26 17:56:10.481104"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 4043)
+
+
+Started DELETE "//destinations/23" for ::1 at 2021-02-26 10:56:13 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 7.0ms | Allocations: 2504)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:56:20 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2158)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:57:00 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Rose", "user"=>{"name"=>"Rose"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Rose"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1637)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 10:57:29 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Cabo", "country"=>"Mexico", "importance"=>"4", "user_id"=>7, "destination"=>{"city"=>"Cabo", "country"=>"Mexico", "importance"=>"4", "user_id"=>7}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.5ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Cabo"], ["country", "Mexico"], ["importance", 4], ["user_id", 7], ["created_at", "2021-02-26 17:57:29.166936"], ["updated_at", "2021-02-26 17:57:29.166936"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 3738)
+
+
+Started DELETE "//destinations/24" for ::1 at 2021-02-26 10:57:43 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.2ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 6.2ms | Allocations: 2382)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 10:57:46 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Cabo", "country"=>"Mexico", "importance"=>"4", "user_id"=>7, "destination"=>{"city"=>"Cabo", "country"=>"Mexico", "importance"=>"4", "user_id"=>7}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Cabo"], ["country", "Mexico"], ["importance", 4], ["user_id", 7], ["created_at", "2021-02-26 17:57:46.613106"], ["updated_at", "2021-02-26 17:57:46.613106"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 3738)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 10:57:48 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 2310)
+
+
+Started POST "//users" for ::1 at 2021-02-26 10:57:58 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Rose", "user"=>{"name"=>"Rose"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Rose"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 11:10:53 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 2333)
+
+
+Started POST "//users" for ::1 at 2021-02-26 11:11:00 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Steve", "user"=>{"name"=>"Steve"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Steve"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Steve"], ["created_at", "2021-02-26 18:11:00.748907"], ["updated_at", "2021-02-26 18:11:00.748907"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 3.4ms | Allocations: 3836)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 11:11:15 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Berlin", "country"=>"Germany", "importance"=>"4", "user_id"=>8, "destination"=>{"city"=>"Berlin", "country"=>"Germany", "importance"=>"4", "user_id"=>8}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Berlin"], ["country", "Germany"], ["importance", 4], ["user_id", 8], ["created_at", "2021-02-26 18:11:15.944855"], ["updated_at", "2021-02-26 18:11:15.944855"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 3751)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 11:11:27 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 2462)
+
+
+Started POST "//users" for ::1 at 2021-02-26 11:11:38 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Steve", "user"=>{"name"=>"Steve"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Steve"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mDestination Load (0.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1793)
+
+
+Started DELETE "//destinations/26" for ::1 at 2021-02-26 11:11:42 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"26"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 7.0ms | Allocations: 2401)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 13:43:04 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 6502)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 15:03:56 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 2332)
+
+
+Started POST "//users" for ::1 at 2021-02-26 15:06:06 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Kelsey", "user"=>{"name"=>"Kelsey"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kelsey"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Kelsey"], ["created_at", "2021-02-26 22:06:06.317012"], ["updated_at", "2021-02-26 22:06:06.317012"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 20ms (Views: 2.9ms | ActiveRecord: 4.2ms | Allocations: 6543)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 15:06:35 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Auckland", "country"=>"New Zealand", "importance"=>"5", "user_id"=>9, "destination"=>{"city"=>"Auckland", "country"=>"New Zealand", "importance"=>"5", "user_id"=>9}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Auckland"], ["country", "New Zealand"], ["importance", 5], ["user_id", 9], ["created_at", "2021-02-26 22:06:35.753136"], ["updated_at", "2021-02-26 22:06:35.753136"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4021)
+
+
+Started DELETE "//destinations/27" for ::1 at 2021-02-26 15:06:58 -0700
+Processing by DestinationsController#destroy as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mDestination Load (0.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations" WHERE "destinations"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:13:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[36mDestination Destroy (0.4ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:14:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 6.8ms | Allocations: 2504)
+
+
+Started POST "//destinations" for ::1 at 2021-02-26 15:07:02 -0700
+Processing by DestinationsController#create as JSON
+  Parameters: {"city"=>"Auckland", "country"=>"New Zealand", "importance"=>"5", "user_id"=>9, "destination"=>{"city"=>"Auckland", "country"=>"New Zealand", "importance"=>"5", "user_id"=>9}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("city", "country", "importance", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["city", "Auckland"], ["country", "New Zealand"], ["importance", 5], ["user_id", 9], ["created_at", "2021-02-26 22:07:02.644059"], ["updated_at", "2021-02-26 22:07:02.644059"]]
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/destinations_controller.rb:8:in `create'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 8.1ms | Allocations: 3738)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 15:07:06 -0700
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (3.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 3.0ms | Allocations: 2462)
+
+
+Started GET "//destinations" for ::1 at 2021-02-26 15:33:34 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DestinationsController#index as */*
+  Parameters: {"destination"=>{}}
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/controllers/destinations_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 1.2ms | Allocations: 2484)
+
+
